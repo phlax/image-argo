@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -qq \
     && apt-get install -y -qq --no-install-recommends \
                curl \
+    && echo "CURL INSTALLED" \
     && TMPBUILD=$(mktemp -d) \
     && cd $TMPBUILD \
     && curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.3.9/argo-linux-amd64.gz \
