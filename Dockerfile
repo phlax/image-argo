@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -qq \
     && apt-get install -y -qq --no-install-recommends \
+               ca-certificates \
                curl \
     && echo "CURL INSTALLED" \
     && TMPBUILD=$(mktemp -d) \
